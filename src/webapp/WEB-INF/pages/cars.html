@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>Cars</title>
+    </head>
+    <body>
+        <a href="http://localhost:8080">GO TO BACK</a><br>
+        <br>
+        <a href="cars?count=1">GO TO 1 CAR</a><br>
+        <a href="cars?count=2">GO TO 2 CAR</a><br>
+        <a href="cars?count=3">GO TO 3 CAR</a><br>
+        <a href="cars?count=4">GO TO 4 CAR</a><br>
+        <a href="cars?count=5">GO TO 5 CAR</a><br><br>
+
+      <table border="1">
+        <tr>
+          <th>Brand</th>
+          <th>Model</th>
+          <th>Age</th>
+        </tr>
+        <tr th:each="car : ${cars}">
+          <td th:text="${car.brand}"></td>
+          <td th:text="${car.model}"></td>
+          <td th:text="${car.age}"></td>
+        </tr>
+      </table>
+    </body>
+  </html>
+</html>
